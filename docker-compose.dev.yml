@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  crawler-db:
+    image: postgres:latest
+    volumes:
+      - crawler_pg:/docker-entrypoint-initdb.d/
+    ports:
+      - "5445:5432"
+    environment:
+      - POSTGRES_DB=crawler
+      - POSTGRES_USER=crawler
+      - POSTGRES_PASSWORD=crawler
+
+volumes:
+  sbt_cache:
+  crawler_pg:
