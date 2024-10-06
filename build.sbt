@@ -7,7 +7,14 @@ lazy val settings = Seq(
     case PathList("cache", _*)                => MergeStrategy.discard
     case PathList("META-INF", _*)             => MergeStrategy.discard
     case _                                    => MergeStrategy.first
-  }
+  },
+  developers +=
+    Developer(
+      "gschepkin",
+      "Egor Schepkin",
+      "eshepkin@gmail.com",
+      url("https://github.com/gschepkin")
+    )
 )
 
 lazy val crawler =
