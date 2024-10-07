@@ -59,14 +59,14 @@ CACHE_CLEANER_AWAKE_EVERY=1 minute # cache - cleaner delete old raws from cache 
 
 ## API
 ### Endpoints:
-- `GET /admin` - swagger endpoint by default (to open UI and send requests)
+- `GET /admin` - swagger endpoint by default (to open UI and send requests, endpoint name cat be changed from env params)
 - `GET /health` - liveness probe
-- `GET /crawl` - crawl urls to get titles
+- `GET /crawl` - crawl urls to get titles, need params: access token from env and url (mb multiple)
 
 ### Example of request:
 ```url
 GET 
-/crawl?url=http://localhost&url=http://localhost&url=http://localhost
+/crawl?access-token=token&url=http://localhost&url=http://localhost&url=http://localhost
 ```
 
 ### Example of success response:
